@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  statistics-exam:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: statistics-exam
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+    # 可选：限制容器内存
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 512M
